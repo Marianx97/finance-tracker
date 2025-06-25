@@ -20,6 +20,8 @@ gem "jbuilder"
 # Use Bootstrap for styling
 gem "bootstrap", '~> 5.2.2'
 
+gem 'devise-bootstrap-views', '~> 1.0'
+
 # Use JQuery
 gem "jquery-rails"
 
