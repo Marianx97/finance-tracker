@@ -28,6 +28,9 @@ gem "jquery-rails"
 # Use Sass to process CSS
 gem "sassc-rails"
 
+# Use Awesome fonts for Rails
+gem "font-awesome-rails"
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 
