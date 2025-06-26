@@ -15,14 +15,11 @@ class Stock < ApplicationRecord
     url = get_api_url('GLOBAL_QUOTE', ticker_symbol)
     response = HTTParty.get(url)
     if response.code == 200 && response.parsed_response['Global Quote']
-      puts 'FOUND SOMETHING'
       last_price = response.parsed_response['Global Quote']['05. price']
       name = company_lookup(ticker_symbol)
       new(ticker: ticker_symbol, name: name, last_price: last_price)
     else
-      puts 'FOUND NOTHING'
-      # nil
-      new(ticker: ticker_symbol, name: 'mock-name', last_price: 10)
+      nil
     end
   end
 
