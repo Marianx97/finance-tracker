@@ -1,0 +1,13 @@
+<% if resource.errors.any? %>
+  <% messages = resource.errors.full_messages %>
+  <% sentence = I18n.t('errors.messages.not_saved', count: resource.errors.count, resource: resource.class.model_name.human.downcase) %>
+
+  <div class="alert alert-danger alert-dismissible fade show">
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    <h4 class="alert-heading"><%= sentence %></h4>
+    <% messages.each do |message| %>
+      <li> <%= message %> </li>
+    <% end %>
+  </div>
+
+<% end %>
