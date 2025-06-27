@@ -2,7 +2,7 @@
   <%= render 'shared/messages' %>
 
   <% if @stock %>
-    <div class="card card-header stock-card">
+    <div class="card card-header stock-card mb-4">
       <strong>Symbol: </strong> <%= @stock.ticker %>
       <strong>Name: </strong> <%= @stock.name %>
       <strong>Price: </strong> <%= @stock.last_price %>
