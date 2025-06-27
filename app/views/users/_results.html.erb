@@ -1,0 +1,11 @@
+<%= turbo_frame_tag 'results_turbo_stream' do %>
+  <%= render 'shared/messages' %>
+
+  <% if @stock %>
+    <div class="card card-header stock-card">
+      <strong>Symbol: </strong> <%= @stock.ticker %>
+      <strong>Name: </strong> <%= @stock.name %>
+      <strong>Price: </strong> <%= @stock.last_price %>
+    </div>
+  <% end %>
+<% end %> 
