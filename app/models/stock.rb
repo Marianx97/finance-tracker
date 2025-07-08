@@ -17,6 +17,10 @@ class Stock < ApplicationRecord
   end
 
   def self.new_lookup(ticker_symbol)
+    # MOCK
+    # new(ticker: ticker_symbol, name: 'mock-name', last_price: 10)
+
+    # REAL
     url = get_api_url('GLOBAL_QUOTE', ticker_symbol)
     response = HTTParty.get(url)
     if response.code == 200 &&
@@ -27,7 +31,6 @@ class Stock < ApplicationRecord
       new(ticker: ticker_symbol, name: name, last_price: last_price)
     else
       nil
-      # new(ticker: ticker_symbol, name: 'mock-name', last_price: 10)
     end
   end
 
