@@ -18,7 +18,7 @@ gem "stimulus-rails"
 gem "jbuilder"
 
 # Use Bootstrap for styling
-gem "bootstrap", '~> 5.2.2'
+gem "bootstrap", '~> 5.3.5'
 
 gem 'devise-bootstrap-views', '~> 1.0'
 
