@@ -19,5 +19,5 @@
 <%= render 'users/results' %>
 
 <% if !@tracked_stocks.empty? %>
-  <%= render 'stocks/list' %>
+  <%= render 'stocks/list', tracked_stocks: @tracked_stocks %>
 <% end %>

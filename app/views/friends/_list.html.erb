@@ -23,6 +23,11 @@
                         turbo_confirm: "Are you sure?"
                       },
                       class: 'btn btn-sm btn-warning' %>
+                  <%= link_to 'Profile',
+                      user_path(friend),
+                      data: { turbo: false },
+                      form_class: 'search-user-btn',
+                      class: 'btn btn-xs btn-success' %>
                 </td>
               </tr>
             <% end %>

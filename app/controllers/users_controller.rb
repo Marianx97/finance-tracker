@@ -1,7 +1,12 @@
 class UsersController < ApplicationController
   before_action :set_friend, only: [ :add_friend, :remove_friend ]
 
+  def show
+    @user = User.find(params[:id])
+  end
+
   def my_portfolio
+    @user = current_user
     @tracked_stocks = current_user.stocks
   end
 

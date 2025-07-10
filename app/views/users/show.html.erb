@@ -1,0 +1,12 @@
+<h2> User Details </h2>
+
+<div class="container">
+  <li> Full name: <%= @user.full_name %> </li>
+  <li> Email: <%= @user.email %> </li>
+</div>
+
+<h3> Tracked stocks </h3>
+
+<% if !@user.stocks.empty? %>
+  <%= render 'stocks/list', tracked_stocks: @user.stocks %>
+<% end %>

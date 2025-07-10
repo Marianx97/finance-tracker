@@ -7,7 +7,13 @@
             <tr class="my-1">
               <td><strong> Full Name: </strong> <%= user.full_name %></td>
               <td><strong> Email: </strong> <%= user.email %></td>
-              <td><%= button_to 'Profile', '#', method: :get, form_class: 'search-user-btn', class: 'btn btn-xs btn-success' %></td>
+              <td>
+                <%= link_to 'Profile',
+                    user_path(user),
+                    data: { turbo: false },
+                    form_class: 'search-user-btn',
+                    class: 'btn btn-xs btn-success' %>
+              </td>
               <td>
                 <% if !current_user.already_friends?(user) %>
                   <%= button_to 'Add friend',
