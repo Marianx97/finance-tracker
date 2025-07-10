@@ -1,0 +1,30 @@
+<%= turbo_frame_tag 'search_friend_result' do %>
+  <% if !users.empty? %>
+    <div class="card card-header friend-card mb-4">
+      <table class="col-md-12">
+        <tbody>
+          <% users.each do |user| %>
+            <tr class="my-1">
+              <td><strong> Full Name: </strong> <%= user.full_name %></td>
+              <td><strong> Email: </strong> <%= user.email %></td>
+              <td><%= button_to 'Profile', '#', method: :get, form_class: 'search-user-btn', class: 'btn btn-xs btn-success' %></td>
+              <td>
+                <% if !current_user.already_friends?(user) %>
+                  <%= button_to 'Add friend',
+                      add_friend_path(user: current_user, friend: user),
+                      method: :post,
+                      form_class: 'search-user-btn',
+                      class: 'btn btn-xs btn-success' %>
+                <% else %>
+                  <span class="badge badge-secondary bg-warning">
+                    Already friends
+                  </span>
+                <% end %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  <% end %>
+<% end %>

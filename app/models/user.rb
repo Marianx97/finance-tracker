@@ -30,4 +30,14 @@ class User < ApplicationRecord
   def full_name
     first_name || last_name ? "#{first_name} #{last_name}" : "Anonymous"
   end
+
+  def already_friends?(friend)
+    friends.find_by(email: friend.email).present?
+  end
+
+  def self.search_other_users_like(current_user, param)
+    value = "%#{param}%".downcase
+    query = "LOWER(email) like :value OR LOWER(first_name) like :value OR LOWER(last_name) like :value"
+    where(query, value: value).reject { |user| user.id === current_user.id }
+  end
 end

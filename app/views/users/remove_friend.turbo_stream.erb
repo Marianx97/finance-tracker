@@ -1,0 +1,7 @@
+<%= turbo_stream.replace "friend_operation_message" do %>
+  <%= render 'friends/message' %>
+<% end %>
+
+<%= turbo_stream.replace "friends_table" do %>
+  <%= render 'friends/list', friends: @friends %>
+<% end %>
