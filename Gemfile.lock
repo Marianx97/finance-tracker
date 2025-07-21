@@ -91,7 +91,7 @@ GEM
       autoprefixer-rails (>= 9.1.0)
       popper_js (>= 2.11.6, < 3)
       sassc-rails (>= 2.0.0)
-    brakeman (7.0.2)
+    brakeman (7.1.0)
       racc
     builder (3.3.0)
     byebug (12.0.0)
@@ -120,6 +120,7 @@ GEM
     drb (2.2.3)
     erb (4.0.4)
       cgi (>= 0.3.3)
+    error_highlight (0.7.0)
     erubi (1.13.1)
     execjs (2.10.0)
     faraday (1.10.4)
@@ -145,7 +146,7 @@ GEM
     faraday-patron (1.0.0)
     faraday-rack (1.0.0)
     faraday-retry (1.0.3)
-    ffi (1.17.2-x64-mingw-ucrt)
+    ffi (1.17.2-x86_64-linux-gnu)
     font-awesome-rails (4.7.0.9)
       railties (>= 3.2, < 9.0)
     globalid (1.2.1)
@@ -204,14 +205,14 @@ GEM
     net-smtp (0.5.1)
       net-protocol
     nio4r (2.7.4)
-    nokogiri (1.18.8-x64-mingw-ucrt)
+    nokogiri (1.18.8-x86_64-linux-gnu)
       racc (~> 1.4)
     orm_adapter (0.5.0)
     parallel (1.27.0)
     parser (3.3.8.0)
       ast (~> 2.4.1)
       racc
-    pg (1.5.9-x64-mingw-ucrt)
+    pg (1.5.9)
     popper_js (2.11.8)
     pp (0.6.2)
       prettyprint
@@ -338,8 +339,6 @@ GEM
       railties (>= 7.1.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
-    tzinfo-data (1.2025.2)
-      tzinfo (>= 1.0.0)
     unicode-display_width (3.1.4)
       unicode-emoji (~> 4.0, >= 4.0.4)
     unicode-emoji (4.0.4)
@@ -361,7 +360,7 @@ GEM
     zeitwerk (2.6.18)
 
 PLATFORMS
-  x64-mingw-ucrt
+  x86_64-linux
 
 DEPENDENCIES
   alphavantage
